@@ -1,0 +1,12 @@
+
+import streamlit as st
+st.title("Data Quality Monitoring Dashboard")
+st.subheader("Model Performance")
+st.text("Classification Report:")
+st.text(classification_report(y_test, y_pred))
+# Display ROC Curve
+st.subheader("ROC Curve")
+st.line_chart({"False Positive Rate": fpr, "True Positive Rate": tpr})
+# Display Confusion Matrix
+st.subheader("Confusion Matrix")
+st.write(cm)
